@@ -79,7 +79,7 @@ docker run -p 8000:8000 streamoid-backend
     curl -X POST -F "file=@products.csv" http://localhost:8000/upload
 ```
 ### Example Response
-```
+```json
 {
   "message": "CSV processed successfully",
   "stored": 15,
@@ -111,7 +111,7 @@ docker run -p 8000:8000 streamoid-backend
 GET /products?page=1&limit=5
 ```
 #### Response
-```
+```json
 {
   "total": 20,
   "page": 1,
@@ -153,7 +153,7 @@ GET /products?page=1&limit=5
 GET /products/search?brand=BloomWear&maxPrice=2500
 ```
 #### Response
-```
+```json
 {
   "total": 2,
   "page": 1,
