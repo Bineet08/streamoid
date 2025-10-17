@@ -215,5 +215,5 @@ uploads/csv/
 
 ## Authors
 
-- [@Bineet Gupta](https://www.github.com/bineet_08)
+- [@Bineet Gupta](https://www.github.com/bineet08)
 
