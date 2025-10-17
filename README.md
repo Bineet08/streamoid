@@ -173,7 +173,42 @@ GET /products/search?brand=BloomWear&maxPrice=2500
   ]
 }
 ```
+## CSV Sample
+Save as `products.csv`:
+```csv
+sku,name,brand,color,size,mrp,price,quantity
+S1,Shirt,Acme,Red,M,999,799,10
+S2,Shirt,Acme,Blue,L,899,799,5
+```
 
+## Folder Structure
+```
+App
+|
+|--Controllers/
+|        product.controller.js
+|--Middlewares/
+|       upload.middleware.js
+|--Models/
+|          product.model.js
+|--Routes/
+|       productRoute.js
+index.js
+uploads/csv/
+```
+
+## Notes
+- Upload destination: `uploads/csv/` (created automatically)
+- File type must be `text/csv`
+- Duplicate SKUs in a single CSV are rejected; existing DB duplicates return `duplicateCount`
+
+## Roadmap (Suggested)
+- Request validation (Joi/Zod)
+- Better error handling middleware
+- Sorting and more filters
+- Swagger/OpenAPI docs
+- Dockerfile and CI
+- Tests (Jest + Supertest)
 
 
 
