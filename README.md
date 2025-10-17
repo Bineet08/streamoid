@@ -75,7 +75,7 @@ docker run -p 8000:8000 streamoid-backend
 
 #### Upload CSV
 
-```http
+```bash
     curl -X POST -F "file=@products.csv" http://localhost:8000/upload
 ```
 ### Example Response
@@ -97,7 +97,7 @@ docker run -p 8000:8000 streamoid-backend
 
 #### List all items
 
-```http
+```bash
   GET /products
 ```
 
@@ -135,7 +135,7 @@ GET /products?page=1&limit=5
 
 ### Search 
 
-```http
+```bash
   GET /products/search
 ```
 #### Query Parameters
